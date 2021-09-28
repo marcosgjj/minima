@@ -201,13 +201,152 @@ Class Image_class
 		if (strtolower($extension) == "jpg") || (strtolower($extension) == "jpeg")
 		{
 			// checks image orientation
+		if(@$exif = exif_read_data($original_image_path))
+		{
+				 
+				if (isset($exif['Orientation'])) 
+				{
+					$a = $exif['Orientation'];
+					
+					//determine what oreientation the image was taken at
+					if ($a == 3) 
+					{	// 180 rotate left
+						
+						$orientation = 180;
+					 
+					}
+					elseif ($a == 5) 
+					{	//flip vertical + 90 rotate right
+						
+						$orientation = -90;
+						
+					}
+					elseif ($a == 6) 
+					{	//90 rotate right
+						
+						$orientation = -90;
+					 
+					}
+					elseif ($a == 7) 
+					{	// horizontal flip + 90 rotate right
+						
+						$orientation = -90;
+						 
+					}
+					elseif ($a == 8) 
+					{	// 90 rotate left
+						
+						$orientation = 90;
+					 
+					}
+				
+				}
+				
 		}
+				 
+				
+			}
 
+	//start the actual resizing
+    $w = imagesx($image); //current width
+    $h = imagesy($image); //current height
+    if ((!$w) || (!$h)) { $GLOBALS['errors'][] = 'Image couldn\'t be resized because it wasn\'t a valid image.'; return false; }
+
+    if (($w <= $max_width) && ($h <= $max_height)) {//no resizing needed. retain dimensions but still create new image
+	
+	$new_w = $w;
+	$new_h = $h;
+		//return $image; } //no resizing needed
+    
+	}else{
+	
+	
+		//try max width first...
+		$ratio = $max_width / $w;
+		$new_w = $max_width;
+		$new_h = $h * $ratio;
+		
+		//if that didn't work
+		if ($new_h > $max_height) {
+			$ratio = $max_height / $h;
+			$new_h = $max_height;
+			$new_w = $w * $ratio;
+		}
+    
+	}
+	
+	
+    $new_image = imagecreatetruecolor ($new_w, $new_h);
+    imagecopyresampled($new_image,$image, 0, 0, 0, 0, $new_w, $new_h, $w, $h);
+ 
+ 	//rotate image if necessary
+	if($orientation != 0){
+	
+		// Rotate
+		$new_image = imagerotate($new_image, $orientation, 0);
+
+	}
+	
+ 	//save resized image
+ 	imagejpeg($new_image,$resized_image_path,100);
+	imagedestroy($new_image);
+ 
+	return true;
+		
+}
+
+function get_thumbnail($file,$width = 300,$height = 300){
+ 
+		if(file_exists($file)){
+		
+			$file_extention = explode(".",$file);
+			$file_extention = end($file_extention);
+			
+			if(strtolower($file_extention) == "jpg" || strtolower($file_extention) == "jpeg"){
+			
+				$thumb = str_replace("." . $file_extention,"_thumb." . $file_extention,$file);
+		 
+		  
+				if(file_exists($thumb)){
+		  
+					return $thumb;
+				 
+				}else{
+				
+					make_new:
+					//create a square thumbnail for display
+				 
+						$this->resize_image_crop($file,$thumb,$width,$height);
+				 
+					
+					if(file_exists($thumb)){
+					
+						return $thumb;
+					
+					}else{
+					
+						return($file);
+						
+					}
+					
+				}
+				
+			}else{
+			
+				return $file;
+			
+			}
+
+		}else{
+		
+			return $file;
+		
+		}
 
 	}
 
 }
 
-
+?>
 
 
