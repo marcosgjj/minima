@@ -7,7 +7,7 @@ define("WEBSITE_NAME", "My Website");
 /* set data base variables*/
 
 define('DB_TYPE', 'mysql');
-define('DB_NAME'), 'mvc_db');
+define('DB_NAME', 'minima_db');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_HOST', 'localhost');	
@@ -33,5 +33,5 @@ if(DEBUG)
 	ini_set("display_errors",1);
 
 }else{
-	init_set("display_errors",0)
+	init_set("display_errors",0);
 }
