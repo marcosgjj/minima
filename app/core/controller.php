@@ -13,10 +13,10 @@ Class Controller
     }
     protected function loadModel($model)
     {
-        if(file_exists("../app/model/". $model.".php"))
+        if(file_exists("../app/model/". $model .".php"))
         {
-            include "../app/model/". $model.".php";
-            $model = new $model();
+            include "../app/model/". $model .".php";
+            return $model = new $model();
         }
         
         return false;
