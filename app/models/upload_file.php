@@ -1,5 +1,5 @@
 <?php
-
+/*
 Class Upload_file
 {
 
@@ -57,4 +57,4 @@ Class Upload_file
 		}
 	}
 
-}
+}*/

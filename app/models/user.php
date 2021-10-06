@@ -1,5 +1,5 @@
 <?php 
-
+/*
 Class User 
 {
 
@@ -34,7 +34,7 @@ Class User
 			$_SESSION['error'] = "please enter a valid username and password";
 		}
 
-	}
+	} 
 
 	function signup($POST)
 	{
@@ -102,4 +102,4 @@ Class User
 	}
 
 
-}
+}*/

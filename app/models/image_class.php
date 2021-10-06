@@ -30,11 +30,10 @@ Class Image_class
 				$extension = "jpg";
 				$image = imagecreatefromjpeg($original_image_path);
 			}
-		//get orientation information if file is a jpeg
+	//get orientation information if file is a jpeg
 		$orientation = 0;
 			
-		if ((strtolower($extension) == "jpg") || (strtolower($extension) == "jpeg"))
-		{	
+		if ((strtolower($extension) == "jpg") || (strtolower($extension) == "jpeg")){	
 			//check the orientation
 			@$exit = exif_read_data($original_image_path);
 
