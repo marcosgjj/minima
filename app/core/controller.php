@@ -11,7 +11,7 @@ Class Controller
             include "../app/views/404.php";
         }
     }
-    protected function model($model)
+    protected function loadModel($model)
     {
         if(file_exists("../app/model/". $model.".php"))
         {
