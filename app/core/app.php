@@ -33,7 +33,7 @@ Class App
         }
         ///run the class and method
         $this->params = array_values($url);
-        call_user_func_array([$this->controller, $this->method], $this->params);
+        call_user_func_array([$this->controller,$this->method], $this->params);
     }
     
     /// explode separates, filter_var security from external inputs, trim separates
