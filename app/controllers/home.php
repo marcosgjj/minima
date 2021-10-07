@@ -6,7 +6,8 @@ Class Home extends Controller
     function index()
     {
         $DB = new Database();
-        $DB->db_connect();
+        show($DB->read("SELECT * FROM images"));
+
         $this->view("home");   
     }
     
