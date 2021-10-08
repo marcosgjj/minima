@@ -1,5 +1,5 @@
 <?php
-/*
+
 Class Pagination
 {
 	private $URL = "";
@@ -55,4 +55,3 @@ Class Pagination
 	}
 
 }
-*/

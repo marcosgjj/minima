@@ -1,5 +1,5 @@
 <?php 
-/*
+
 Class User 
 {
 
@@ -102,4 +102,4 @@ Class User
 	}
 
 
-}*/
+}

@@ -2,8 +2,8 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minima</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
     <link rel="stylesheet" href="<?=ASSETS?>minima/css/components.css">
     <link rel="stylesheet" href="<?=ASSETS?>minima/css/icons.css">
     <link rel="stylesheet" href="<?=ASSETS?>minima/css/responsee.css">
@@ -26,7 +26,7 @@
         <!-- Top Navigation -->
         <nav class="background-transparent background-transparent-hightlight full-width sticky">
           <div class="s-12 l-2">
-            <a href="index.html" class="logo">
+            <a href="home" class="logo">
               <!-- Logo version before sticky nav -->
               <img class="logo-before" src="<?=ASSETS?>minima/img/logo-dark.png" alt="">
               <!-- Logo version after sticky nav -->
@@ -37,9 +37,12 @@
             <div class="top-nav right">
               <p class="nav-text"></p>
               <ul class="right chevron">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>             
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="<?=ROOT?>home">Home</a></li>
+                <li><a href="<?=ROOT?>about">About Us</a></li>
+                <li><a href="<?=ROOT?>contact">Contact</a></li>
+                <li><a href="<?=ROOT?>signup">Signup</a></li>
+                <li><a href="<?=ROOT?>login">Login</a></li>
+                <li><a href="<?=ROOT?>upload">Upload</a></li>
               </ul>
             </div>
           </div>  

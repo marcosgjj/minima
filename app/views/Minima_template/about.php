@@ -1,4 +1,4 @@
-<?php $this->view("Minima_template/header", $data);?>      
+<?php $this->view("Minima_template/header", $data);?>
 
       <!-- MAIN -->
       <main role="main">
@@ -6,7 +6,7 @@
         <article>
           <header class="section-top-padding background-white">
             <div class="line text-center">        
-              <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">About Us</h1>
+              <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">About</h1>
               <p class="margin-bottom-0 text-size-16 text-dark">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.<br>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
             </div>  

@@ -1,5 +1,5 @@
 <?php 
-/*
+
 Class Posts 
 {
 
@@ -43,4 +43,4 @@ Class Posts
 	}
 
 
-}*/
+}
