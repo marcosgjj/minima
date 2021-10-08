@@ -1,5 +1,5 @@
 <?php $this->view("Minima_template/header", $data);?>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-Sign Up page.
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<div style="min-height: 400px;">
+
+</div>
 <?php $this->view("Minima_template/footer", $data);?>
