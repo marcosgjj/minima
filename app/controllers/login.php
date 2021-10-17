@@ -11,15 +11,17 @@ Class Login extends Controller
         if(isset($_POST['email']))
         {
             $user = $this->loadModel("user");
-            $user->signup($_POST)
+            $user->signup($_POST);
 
-        }elseif(isset($_POST['username']) && !isset($_POST['email'])){
+        }
+        elseif(isset($_POST['username']) && !isset($_POST['email'])){
 
             $user = $this->loadModel("user");
-            $user->login($_POST)
+            $user->login($_POST);
         }
 
-        $this->view("Minima_template/login", $data);   
+        $this->view("Minima_template/login", $data);
+
     }
     
 }
