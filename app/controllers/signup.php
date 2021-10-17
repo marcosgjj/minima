@@ -18,7 +18,7 @@ Class Signup extends Controller
             $user->login($_POST)
         }
 
-        
+         
         $this->view("Minima_template/signup", $data);   
     }
     
