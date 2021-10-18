@@ -1,4 +1,4 @@
-<?php $this->view("Minima_template/logoheader", $data); ?>
+<?php $this->view("Minima_template/logoheader", $data);?>
 <style>
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -105,7 +105,7 @@ body {
 <div class="login-page"> 
   <div class="form">
     <form class="register-form" method="post">
-      <input type="text" name="username" placeholder="name"/>
+      <input type="text" name="username" placeholder="username"/>
       <input type="password" name="password" placeholder="password"/>
       <input type="text" name="email" placeholder="email address"/>
       <button>create</button>

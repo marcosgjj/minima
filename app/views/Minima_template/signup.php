@@ -105,7 +105,7 @@ body {
 <div class="login-page">
   <div class="form">
     <form class="register-form">
-      <input type="text" placeholder="name"/>
+      <input type="text" placeholder="username"/>
       <input type="password" placeholder="password"/>
       <input type="text" placeholder="email address"/>
       <button>create</button>
