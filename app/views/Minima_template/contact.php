@@ -8,6 +8,7 @@
               <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Contact Us</h1>
               <p class="margin-bottom-0 text-size-16 text-dark">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.<br>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+              
             </div>  
           </header>
           <section class="full-width background-dark">
@@ -32,6 +33,7 @@
                 <p>0450 5896 625 16</p>
                 <p>0798 6546 465 </p>
               </div>
+
             </div>
           </section>
           

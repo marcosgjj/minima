@@ -102,7 +102,7 @@ body {
 }
 </style>
 
-<div class="login-page">
+<div class="login-page"> 
   <div class="form">
     <form class="register-form" method="post">
       <input type="text" name="username" placeholder="name"/>
@@ -115,7 +115,7 @@ body {
       <input type="text" name="username" placeholder="username"/>
       <input type="password" name="password" placeholder="password"/>
       <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
+      <p class="message">Not registered? <a href="signup">Create an account</a></p>
     </form>
   </div>
 </div>
