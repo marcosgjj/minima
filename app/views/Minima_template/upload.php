@@ -15,8 +15,8 @@
 	</div>
 
 	<div class="s-12">
-		<textarea name="message" class="required message" placeholder="Your message" rows="3"></textarea>
-       <p class="message-error form-error">Please enter your message.</p>
+		<textarea name="description" class="required message" placeholder="Description" rows="3"></textarea>
+       <p class="message-error form-error">Image description.</p>
      </div>
 	<div class="s-12"><button class="s-12 submit-form button background-primary text-white" type="submit">Submit Button</button></div>
   </form>
