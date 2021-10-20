@@ -1,5 +1,5 @@
 <?php
-
+/*
 Class Upload_file
 {
 
