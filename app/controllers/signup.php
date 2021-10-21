@@ -19,7 +19,7 @@ Class Signup extends Controller
         }
 
          
-        $this->view("Minima_template/signup", $data);   
+        $this->view("notus-js-main/signup", $data);   
     }
     
 }
